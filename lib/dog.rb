@@ -35,7 +35,7 @@ def save
   INSERT INTO dogs (name, breed) VALUES (?, ?)
   SQL
   DB[:conn].execute(sql, self.name, self.breed)
-  @id = DB[:conn].execute("SELECT id FROM dogs WHERE name = ?", self.name)[0]
+  @id = DB[:conn].execute("SELECT id FROM dogs WHERE name = ?", self.name)[0][0]
   self
 end
 
