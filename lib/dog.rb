@@ -47,7 +47,12 @@ def self.find_by_id(id)
   sql = <<-SQL
   SELECT name, breed FROM dogs WHERE id = ?
   SQL
-  DB[:conn].execute(sql, id)
+  dogg = DB[:conn].execute(sql, id)[0]
+  hash = {}
+  hash[:id] = id
+  hash[:name]
+  self.new()
+  
 end
 
 end
