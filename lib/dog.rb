@@ -61,14 +61,14 @@ def self.find_or_create_by(name:, breed:)
   SELECT * FROM dogs WHERE name = ? AND breed = ?
   SQL
 
-  result = DB[:conn].execute(sql, name, breed)
+  result = DB[:conn].execute(sql, name, breed)[0]
 
   if result.empty?
 
     self.create({name: name, breed: breed})
 
   else
-    self.new(id: result[0][0], name: result[0][1], breed: result[0][2])
+    self.new(id: result[0], name: result[1], breed: result[2])
   end
 
 def method_name
