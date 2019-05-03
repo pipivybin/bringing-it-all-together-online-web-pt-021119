@@ -81,7 +81,10 @@ def self.find_by_name(name)
 end
 
 def update
-
+  sql = <<-SQL
+  UPDATE dogs SET name = self.name, breed = self.breed WHERE id = self.id
+  SQL
+  
 end
 
 end
