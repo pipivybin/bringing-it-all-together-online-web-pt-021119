@@ -8,6 +8,9 @@ def initialize(id=nil, name, breed)
   @breed = breed
 end
 
+def self.create_table
+  
+end
 
 
 
