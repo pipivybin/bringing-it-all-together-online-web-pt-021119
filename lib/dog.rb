@@ -43,5 +43,11 @@ def self.create(hash)
   dogg.save
 end
 
+def self.find_by_id(id)
+  sql = <<-SQL
+  SELECT name, breed FROM dogs WHERE id = id
+  SQL
+
+end
 
 end
