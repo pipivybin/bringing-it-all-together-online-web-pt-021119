@@ -65,7 +65,7 @@ def self.find_or_create_by(name:, breed:)
 binding.pry
   if result.empty?
 
-    self.create(name, breed)
+    self.create({name: name, breed: breed})
 
   else
     self.new(id: result[0][0], name: result[0][1], breed: result[0][2])
