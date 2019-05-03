@@ -70,8 +70,9 @@ end
 
 def self.new_from_db(name)
   sql = <<-SQL
-  SELECT * FROM dogs WHERE name = name
+  SELECT * FROM dogs WHERE name = ?
   SQL
+  DB[:conn].execute(sql, name)
 
 end
 
