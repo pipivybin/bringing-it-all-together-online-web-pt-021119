@@ -62,9 +62,9 @@ def self.find_or_create_by(name:, breed:)
   SQL
 
   result = DB[:conn].execute(sql, name, breed)[0]
-
-  if result.empty?
 binding.pry
+  if result.empty?
+
     self.create(name, breed)
 
   else
