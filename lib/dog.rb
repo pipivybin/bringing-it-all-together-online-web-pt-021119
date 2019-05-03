@@ -68,8 +68,12 @@ def self.find_or_create_by(name:, breed:)
   end
 end
 
-def method_name
+def new_from_db(row)
+  sql = <<-SQL
 
+  SQL
+
+  
 end
 
 
