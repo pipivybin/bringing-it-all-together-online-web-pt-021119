@@ -38,7 +38,7 @@ def save
   self
 end
 
-def create
+def create(hash)
 
 end
 
