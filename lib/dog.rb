@@ -52,7 +52,7 @@ def self.find_by_id(id)
   hash[:id] = id
   hash[:name] = dogg[1]
   hash[:breed] = dogg[2]
-  self.new()
+  self.new(hash)
 
 end
 
