@@ -67,7 +67,7 @@ def self.find_or_create_by(name:, breed:)
 
   else
     binding.pry
-    self.new(id:, name: name, breed: breed)
+    self.create(name: name, breed: breed)
   end
 
 def method_name
