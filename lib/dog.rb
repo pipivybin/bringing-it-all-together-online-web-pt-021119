@@ -51,7 +51,7 @@ def self.find_by_id(id)
   dogg = DB[:conn].execute(sql, id)[0]
 
   self.new(id: id, name: dogg[1], breed: dogg[2])
-  binding.pry
+
 end
 
 def self.find_or_create_by(name:, breed:)
@@ -64,7 +64,7 @@ def self.find_or_create_by(name:, breed:)
   if result
 
     self.find_by_id(result[0])
-
+binding.pry
   else
     self.new(id: result[0], name: result[1], breed: result[2])
   end
