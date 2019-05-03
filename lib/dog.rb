@@ -50,7 +50,8 @@ def self.find_by_id(id)
   dogg = DB[:conn].execute(sql, id)[0]
   hash = {}
   hash[:id] = id
-  hash[:name]
+  hash[:name] = dogg[1]
+  hash[:breed] = dogg[2]
   self.new()
 
 end
