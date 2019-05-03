@@ -35,6 +35,7 @@ def save
   SQL
   DB[:conn].execute(sql, self.name, self.breed)
   @id = DB[:conn].execute("SELECT id FROM dogs WHERE name = ?", self.name)
+  self
 end
 
 
