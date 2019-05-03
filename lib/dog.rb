@@ -51,7 +51,7 @@ def self.find_by_id(id)
   dogg = DB[:conn].execute(sql, id)[0]
 
   self.new(id: id, name: dogg[1], breed: dogg[2])
-
+  dogg
 end
 
 def self.find_or_create_by(name:, breed:)
