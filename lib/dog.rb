@@ -68,7 +68,7 @@ def self.find_or_create_by(name:, breed:)
     self.create(name: result[0], breed: result[1])
     binding.pry
   end
-  
+
 end
 
 end
