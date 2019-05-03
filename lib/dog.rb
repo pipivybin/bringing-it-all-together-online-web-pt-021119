@@ -61,7 +61,6 @@ def self.find_or_create_by(name:, breed:)
   SQL
 
   result = DB[:conn].execute(sql, name, breed)[0]
-  binding.pry
 
   if !result.empty?
     self.new(id: result[0], name: result[1], breed: result[2])
