@@ -84,7 +84,7 @@ def update
   sql = <<-SQL
   UPDATE dogs SET name = self.name, breed = self.breed WHERE id = self.id
   SQL
-  
+
 end
 
 end
