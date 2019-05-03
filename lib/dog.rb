@@ -39,7 +39,7 @@ def save
 end
 
 def self.create(hash)
-  self.new(hash[:name])
+  self.new(hash[:name], hash[:breed])
 end
 
 
