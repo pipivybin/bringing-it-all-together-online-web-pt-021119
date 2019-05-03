@@ -60,7 +60,7 @@ def self.find_or_create_by(name:, breed:)
   SELECT * FROM dogs WHERE name = ?, breed = ?
   SQL
 
-  result = DB[:conn].execute(sql, name, breed)
+  result = DB[:conn].execute(sql, name, breed).first
 
   if !result.empty?
     self.new(id: result[0], name: result[1], breed: result[2])
