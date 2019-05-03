@@ -55,7 +55,7 @@ def self.find_by_id(id)
   self.new(hash)
 end
 
-def self.find_or_create_by
+def self.find_or_create_by(name:, breed:)
 
 end
 
