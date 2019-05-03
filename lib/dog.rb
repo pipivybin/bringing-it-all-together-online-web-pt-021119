@@ -31,7 +31,7 @@ def save
   INSERT INTO dogs (name, breed) VALUES (?, ?)
   SQL
   dog = DB[:conn].execute(sql, self.name, self.breed)
-
+  binding.pry
 end
 
 
