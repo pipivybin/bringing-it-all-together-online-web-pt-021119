@@ -63,7 +63,7 @@ def self.find_or_create_by(name:, breed:)
   result = DB[:conn].execute(sql, name, breed)[0]
 
   if result.empty?
-    self.create(name: result[0], breed: result[1])
+    self.create(name, breed)
   else
     self.new(id: result[0], name: result[1], breed: result[2])
   end
