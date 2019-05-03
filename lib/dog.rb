@@ -73,7 +73,7 @@ def new_from_db(row)
 
   SQL
 
-  
+
 end
 
 
