@@ -68,7 +68,7 @@ binding.pry
     self.create(name, breed)
 
   else
-    self.new(id: result[0][0]], name: result[0][1], breed: result[0][2])
+    self.new(id: result[0][0], name: result[0][1], breed: result[0][2])
   end
 
 
