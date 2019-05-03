@@ -64,8 +64,9 @@ def self.find_or_create_by(name:, breed:)
   if result
 
     self.find_by_id(result[0])
-binding.pry
+
   else
+    binding.pry
     self.new(id: result[0], name: result[1], breed: result[2])
   end
 
