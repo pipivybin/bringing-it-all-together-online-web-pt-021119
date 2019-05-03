@@ -61,7 +61,7 @@ def self.find_or_create_by(name:, breed:)
   SELECT * FROM dogs WHERE name = ? AND breed = ?
   SQL
 
-  result = DB[:conn].execute(sql, name, breed)[0]
+  result = DB[:conn].execute(sql, name, breed)
 binding.pry
   if result.empty?
 
