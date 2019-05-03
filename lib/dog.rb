@@ -49,6 +49,7 @@ def self.find_by_id(id)
   SELECT name, breed FROM dogs WHERE id = ?
   SQL
   dogg = DB[:conn].execute(sql, id)[0]
+  binding.pry
   self.new(name: dogg[1], breed: dogg[2])
 end
 
