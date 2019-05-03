@@ -68,7 +68,7 @@ def self.find_or_create_by(name:, breed:)
   end
 end
 
-def new_from_db(row)
+def self.new_from_db(row)
   self.new(row[0], row[1], row[2])
 end
 
