@@ -81,7 +81,7 @@ def self.find_by_name(name)
   SELECT * FROM dogs WHERE name = ?
   SQL
   arry = DB[:conn].execute(sql, name)[0]
-  self.new_from_db(row)
+  self.find_by_id(arry[0])
 end
 
 def update
