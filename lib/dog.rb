@@ -9,6 +9,7 @@ def initialize(hash)
   @id = hash[:id]
   @name = hash[:name]
   @breed = hash[:breed]
+  self
 end
 
 def self.create_table
@@ -69,7 +70,7 @@ def self.find_or_create_by(name:, breed:)
   else
     self.new(id: result[0], name: result[1], breed: result[2])
   end
-  
+
 
 end
 
