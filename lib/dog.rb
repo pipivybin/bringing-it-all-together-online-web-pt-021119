@@ -6,7 +6,7 @@ attr_accessor :name, :breed
 attr_reader :id
 
 def initialize(hash)
-  @id = nil
+  @id = hash[:id]
   @name = hash[:name]
   @breed = hash[:breed]
 end
