@@ -65,6 +65,7 @@ def self.find_or_create_by(name:, breed:)
   if result.empty?
     self.create(name: result[0], breed: result[1])
   else
+    self.new(id: result[0], name: result[1], breed: result[2])
   end
 
 end
