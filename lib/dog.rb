@@ -41,6 +41,7 @@ end
 def self.create(hash)
   dogg = self.new(hash)
   dogg.save
+  dogg
 end
 
 def self.find_by_id(id)
