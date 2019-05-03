@@ -2,8 +2,7 @@ require 'pry'
 
 class Dog
 
-attr_accessor :name, :breed
-attr_reader :id
+attr_accessor :name, :breed, :id
 
 def initialize(hash)
   @id = hash[:id]
@@ -68,7 +67,7 @@ def self.find_or_create_by(name:, breed:)
   else
 
     self.create(name: name, breed: breed)
-    
+
   end
 
 def method_name
