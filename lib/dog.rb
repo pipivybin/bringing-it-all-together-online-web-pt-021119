@@ -10,7 +10,7 @@ def initialize(hash)
   @name = hash[:name]
   @breed = hash[:breed]
   self
-  binding.pry
+  
 end
 
 def self.create_table
