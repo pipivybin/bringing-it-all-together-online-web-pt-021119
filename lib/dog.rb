@@ -39,7 +39,8 @@ def save
 end
 
 def self.create(hash)
-  self.new(hash[:name], hash[:breed])
+  dogg = self.new(hash[:name], hash[:breed])
+  dogg.save
 end
 
 
