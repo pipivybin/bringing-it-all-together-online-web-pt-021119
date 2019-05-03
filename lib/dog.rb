@@ -52,7 +52,7 @@ def self.find_by_id(id)
   hash[:id] = id
   hash[:name]
   self.new()
-  
+
 end
 
 end
