@@ -72,8 +72,8 @@ def self.new_from_db(name)
   sql = <<-SQL
   SELECT * FROM dogs WHERE name = ?
   SQL
-  arry = DB[:conn].execute(sql, name)
-  
+  arry = DB[:conn].execute(sql, name)[0]
+
 end
 
 def self.find_by_name(name)
