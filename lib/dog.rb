@@ -30,7 +30,8 @@ def save
   sql = <<-SQL
   INSERT INTO dogs (name, breed) VALUES (?, ?)
   SQL
-  DB[:conn].execute(sql)
+  dog = DB[:conn].execute(sql, self.name, self.breed)
+
 end
 
 
